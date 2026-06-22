@@ -1,3 +1,35 @@
-spring:
+﻿spring:
   application:
     name: blog
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: root
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 3s
+
+server:
+  port: 8080
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+blog:
+  jwt:
+    secret: change-me-to-a-long-random-secret-for-blog-jwt-please-replace
+    expire-seconds: 86400
+  admin:
+    github-ids: []
+    emails: []

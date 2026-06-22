@@ -9,10 +9,6 @@
       </list>
     </option>
   </component>
-  <component name="MavenRunner">
-    <option name="jreName" value="1.8" />
-    <option name="vmOptions" value="-Dfile.encoding=UTF-8" />
-  </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
